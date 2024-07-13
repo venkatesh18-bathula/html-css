@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        .image {
+        body {
+            overflow-x: hidden;
+        }
+
+        .imagee{
             position: fixed;
             bottom: 80px;
             right: 18px;
@@ -16,30 +21,12 @@
             border-radius: 50px;
             background: rgb(162, 41, 214);
             border: none;
+            border-radius: 200px 200px 200px 35px;
+            -moz-border-radius: 200px 200px 200px 35px;
+            -webkit-border-radius: 200px 200px 200px 35px;
+            border: 0px solid #000000;
         }
 
-        .bgcol {
-            background-image: url(https://kona-digital.com/images/productbanner.jpg);
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 60%;
-            height: 100vh;
-            margin-top: 18px;
-            margin-right: 20px;
-        }
-
-        body {
-            font-family: Poppins, sans-serif;
-
-        }
-
-        .bluebg {
-            background: linear-gradient(180deg, #F0F9F8 0%, rgba(240, 249, 248, 0) 100%);
-            height: 100vh;
-            /* padding-top: 120px;
-            padding-bottom: 120px; */
-        }
         .modal {
             display: none;
             position: fixed;
@@ -122,11 +109,46 @@
     background-color: #f0f0f0; /* Adjust hover background color */
 }
 
-    </style>
 
+.whatsapp-icon {
+    cursor: pointer;
+    width: 10px; /* Adjust size as needed */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 25rem;
+    right: -80px;
+    transform: translateX(-50%);
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup p {
+    margin: 0px 0;
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust to position the arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+    </style>
 </head>
 
 <body>
+    
     <div class="pop">
 
         <!-- The Modal -->
@@ -164,11 +186,20 @@
         </div>
     </div>
     <div class="image">
-        <img src="https://kona-digital.com/images/call_o_o.png">
+        <div class="whatsapp-container">
+            <div id="whatsapp-icon" class="whatsapp-icon">
+        <img src="https://kona-digital.com/images/call_o_o.png" class="imagee">
+            </div>
+            <div id="popup" class="popup" style="border-bottom-left-radius: 25px;border-bottom-right-radius: 25px; margin-right:-50px;  margin-bottom:580px;">
+                <p  class="px-5"style="background-image: linear-gradient(-225deg, #a429d7 55%, #f58220);padding: 9px;font-size: 18px;color: white;">Call Us (Or) WhatsApp Us</p>
+                <p style="font-size: 22px;padding-top:8%;padding-bottom:8%;padding-left:0%">+91 9515175551</p>
+            </div>
+        </div>
+        
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mt-0 pt-0"
-            style="border-bottom: 1px solid rgba(0, 0, 0, 0.21); padding:5px;border: none; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);">
+            style="border-bottom: 1px solid rgba(0, 0, 0, 0.21); padding:5px;border: none;  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);">
             <div class="col-sm-6">
                 <a href="home.html"><img src="https://kona-digital.com/images/logo.png" style="width:40%;height:auto; margin-left: 100px;"></a>
             </div>
@@ -180,7 +211,7 @@
                             <ul class="navbar-nav bg-none" style="margin-top: 10px;">
 
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    <a class="nav-link dropdown-toggle" href="products.html" role="button" 
                                         aria-expanded="false">
                                         Products
                                     </a>
@@ -191,7 +222,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="solutions.html" role="button" 
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" 
                                         aria-expanded="false">
                                         solutions
                                     </a>
@@ -225,112 +256,174 @@
             </div>
         </div>
     </div>
-    <div class="bgcol ">
-        <div class="container d-flex justify-content center" style="gap:25px">
-
-            <div class="col-sm-8" style="margin-left: 10rem; margin-top: 5rem;">
-                <h2 style="font-size: 40px;color:#272657;margin-bottom: 40px;font-weight: 500;">Empower your<br>
-                    institution’s credence with<br>the most versatile CRM<br> software.</h2>
-                <p>Reinforce the trust among your prospective audience and enhance the customer experience
-                    multifold with Kona’s CRM software. Take your customer support and relationship management
-                    operations to the next level.</p>
-                <button class="px-4 py-2 rounded  text-white"
-                    style="background:linear-gradient(90deg, #4e3bbf, #a928d8);border: none;">Ask for free
-                    demo</button>
+    <div class="container">
+        <div class="row" style="margin-top: 6rem;">
+            <div class="col-sm-6"
+                style="background-image: url('https://kona-digital.com/images/blur1.png'); background-position: top center;">
+                <button class='px-4 py-2'
+                    style=" background:linear-gradient(90deg, #ECEAF8 0%, #E9C4E6 28.28%, #D2CDE2 63.13%, #EAEDFB 100%);border-radius: 30px;border: none;color:rgb(0, 11, 97);font-size: 20px; margin-top:15px;">Own
+                    your Virtual School & College</button>
+                <h2 style="font-size: 60px;line-height: 65px;
+                    font-weight: 500;color: rgb(136, 104, 232);
+                    margin: 20px 0 10px;">Keep your school & college running with kona LMS</h2>
+                <p>LMS is a great student learning tool. LMS can boost students' performance and improve parents'
+                    impressions on school.Kona LMS is the most user friendly LMS system for schools and colleges</p>
+                <button class="mx-5 px-4 py-2 rounded mt-2">know more</button> <button
+                    class="px-4 py-2 rounded mt-2 text-white"
+                    style="background:linear-gradient(90deg, #4e3bbf, #a928d8);border: none;">Ask for free demo</button>
             </div>
-            <div class="col-sm-4" style="margin-top: 11rem;margin-left: 8rem;">
-                <img src="https://kona-digital.com/images/pbanner.jpg" style="height: 50vh;">
+            <div class="col-sm-6">
+                <img src="https://kona-digital.com/images/credit.jpg" alt="">
             </div>
-
-
+        </div>
+        <div class="row" style="margin-top: 6rem;">
+            <div class="col-sm-6">
+                <img src="https://kona-digital.com/images/monitor.jpg" alt="">
+            </div>
+            <div class="col-sm-6" style="margin-top: 3rem;">
+                <button class='px-4 py-2'
+                    style=" background: linear-gradient(90deg, #8D65E9 0%, #5391E4 48.99%, #6BCD94 100%);border-radius: 30px;border: none;color:rgb(0, 11, 97);font-size: 18px; margin-top:15px; color: white;">Advanced
+                    Dashboard</button>
+                <h2 style="color: rgb(138, 104, 232);font-size: 50px; font-weight: 500; margin: 20px 0 10px;width:70%;">
+                    Monitor user activity and subscription plans.</h2>
+                <p style="width:70%">Performance and improve parents' impressions on school.Kona LMS is the most user
+                    friendly LMS system for schools and colleges</p>
+                <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i>
+                    Customer Balance</p>
+                <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i>
+                    Template Category Access</p>
+                <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i> User
+                    Spending</p>
+            </div>
         </div>
     </div>
-    <div class="container " style='text-align:center'>
-        <h2 style="color: rgb(82, 145, 227);font-size: 50px;font-weight: 500;margin-top: 20px;margin-bottom:10px;">
-            Here’s what Kona’s CRM<br>
-            can do for you</h2>
-        <p style="color: rgb(0, 11, 97);">A well-rounded Customer Relationship Management (CRM) software that does
-            more<br>
-            than just managing your customer relationships while you manage your more pressing tasks.</p>
+    <div class="h2"
+        style="background-image: url(https://kona-digital.com/images/whatcanbg.svg); height: 100vh; background-position:left center;">
+        <h2
+            style="color: rgb(106, 126, 230);font-size: 50px;font-weight: 500; padding-top: 100px;padding-left: 220px;margin-bottom: 50px;">
+            What can it write for you?</h2>
+        <div class="container d-flex" style="justify-content: space-around;text-align: center;margin-top: 8rem;">
+            <div>
+                <img src="	https://kona-digital.com/images/code.png" alt="">
+                <h6 class="mt-3">Code</h6>
+            </div>
+            <div>
+                <img src="	https://kona-digital.com/images/video.png" alt="">
+                <h6 class="mt-3">Videos</h6>
+
+            </div>
+            <div>
+                <img src="	https://kona-digital.com/images/news.png" alt="">
+                <h6 class="mt-3">NewsLetter</h6>
+
+            </div>
+            <div>
+                <img src="	https://kona-digital.com/images/music.png" alt="">
+                <h6 class="mt-3">PodcastScript</h6>
+
+            </div>
+            <div>
+                <img src="	https://kona-digital.com/images/social.png" alt="">
+                <h6 class="mt-3">Social media</h6>
+
+            </div>
+        </div>
     </div>
     <div class="container">
-        <div class="row" style="text-align: center; margin-top: 8rem;">
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f1.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Capture leads</h4>
-                <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads with
-                    ease and convert them into <br>rewarding customers.</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f2.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Dashboard</h2>
-                    <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads
-                        with
-                        ease and convert them into <br>rewarding customers.</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f3.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Qualify and prioritize</h2>
-                    <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads
-                        with
-                        ease and convert them into <br>rewarding customers.</p>
+        <div class="row">
+            <div class="col-sm" style="text-align:center">
+                <button class='px-4 py-2'
+                    style=" background: linear-gradient(90deg, #8D65E9 0%, #5391E4 48.99%, #6BCD94 100%);border-radius: 30px;border: none;color:rgb(0, 11, 97);font-size: 18px; margin-top:15px; color: white;margin-bottom: 20px;">Advanced
+                    Dashboard</button>
+                <h1 style="color: rgb(106, 126, 230);font-size: 50px;font-weight: 500;">Works with your fav platforms.
+                </h1>
             </div>
         </div>
-        <div class="row" style="text-align: center; margin-top: 2rem;">
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f3.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Lead Activity</h2>
-                    <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads
-                        with
-                        ease and convert them into <br>rewarding customers.</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f4.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Track Leads Status</h2>
-                    <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads
-                        with
-                        ease and convert them into <br>rewarding customers.</p>
-            </div>
-            <div class="col-sm-4">
-                <img src="https://kona-digital.com/images/f1.png" alt="">
-                <h4 style="color: rgb(0, 11, 97);">Send Email & SMS</h2>
-                    <p>Intuitive lead gathering capability that<br> enables you to contact your potential<br> leads
-                        with
-                        ease and convert them into <br>rewarding customers.</p>
-            </div>
-        </div>
+
     </div>
-    <div class="bluebg">
-        <div class="container">
-            <div class="row" style="padding-top: 120px;padding-bottom: 120px;">
-                <div class="col-sm-6" style="text-align: start;margin-top: 2rem;padding-left:10rem;">
-                    <button
-                        style="color:white;background: linear-gradient(90deg, #8D65E9 0%, #5391E4 48.99%, #6BCD94 100%);padding:10px 20px;border-radius: 10px;border:none">Insights
-                        and Updates</button>
-                    <h1
-                        style="color: rgb(82, 145, 227);font-size: 50px;font-weight: 500;margin-top: 20px;margin-bottom:10px;">
-                        AICopy is built for <br> everyone.</h1>
-                    <p>Track user behavior, sales revenue, and other key metrics<br> essential your business's
-                        success.
-                    </p>
-                    <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i>
-                        Customer Balance</p>
-                    <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i>
-                        Template Category Access</p>
-                    <p style="font-size: 17px" ;><i class="fa-solid fa-circle-check" style="color:#a928d8;"></i>
-                        User
-                        Spending</p>
+    <div class="container">
+        <div class="row" style="margin-top: 5rem; margin-bottom: 0px;">
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/goog.png" alt="" style='height: 100%;'>
+            </div>
+            <div class="col-sm-2">
 
+            </div>
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/gmail.png" alt="">
+            </div>
+            <div class="col-sm-2">
 
-
-                </div>
-                <div class="col-sm-6" style="margin-left: px;">
-                    <img src="https://kona-digital.com/images/ai.png" alt="">
-                </div>
+            </div>
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/tweet.png" alt="">
+            </div>
+            <div class="col-sm-2">
 
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Google </h5>
+                <p style="font-size: 20px">Document</p>
+            </div>
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/word.png" alt="">
+            </div>
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Gmail </h5>
+                <p style="font-size: 20px">Mail client</p>
+
+
+            </div>
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/mail.png" alt="">
+            </div>
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Twitter </h5>
+                <p style="font-size: 20px">Document</p>
+
+
+            </div>
+            <div class="col-sm-2">
+                <img src="https://kona-digital.com/images/z.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Gmail </h5>
+                <p style="font-size: 20px">Mail client</p>
+
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Gmail </h5>
+                <p style="font-size: 20px">Mail client</p>
+
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2" style="margin-left:rem; margin-top:3rem;text-align:center">
+                <h5 style="font-size: 20px; margin-bottom: 0px;">Gmail </h5>
+                <p style="font-size: 20px">Mail client</p>
+
+
+            </div>
+        </div>
+    </div>
+    
     <h3
         style="margin: 0 0 70px;text-align: center;font-weight: 600;font-size: 40px;color:rgb(0, 11, 97);margin-top: 5rem;">
         Q&A</h3>
@@ -352,8 +445,7 @@
                             <div class="accordion-body">
                                 pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
                                 squid single-origin coffee nulla assumenda shoreditch e
 
 
@@ -372,8 +464,7 @@
                             <div class="accordion-body">
                                 pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
                                 squid single-origin coffee nulla assumenda shoreditch et.
 
 
@@ -384,16 +475,15 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">Get insights on
-                                    key metrics like response time and issue volume</strong>
+                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">Get insights on key
+                                    metrics like response time and issue volume</strong>
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
                                 squid single-origin coffee nulla assumenda shoreditch et.
 
 
@@ -403,18 +493,17 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">
                                     Calling unavailable in some countries</strong>
                             </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
 
                                 pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
                                 squid single-origin coffee nulla assumenda shoreditch et.
 
 
@@ -433,8 +522,7 @@
                 <div class="col-sm" style="text-align: center;align-items: center;">
                     <h3 style="font-size: 40px;color:rgb(0, 11, 97); margin-top: 10rem;margin-left: 5rem;">Let’s
                         connect.</h3>
-                    <p>Whether you have a groundbreaking idea or a challenging project <br> in mind, AI Hub is here
-                        to
+                    <p>Whether you have a groundbreaking idea or a challenging project <br> in mind, AI Hub is here to
                         make it a reality.</p>
                     <button class="px-4 py-2 rounded  text-white"
                         style="background:linear-gradient(90deg, #4e3bbf, #a928d8);border: none;padding:10px 24px">Send
@@ -450,11 +538,9 @@
         <div class="row" style="margin-left: 8rem;margin-top: 5rem;">
             <div class="col-sm-3">
                 <img src="	https://kona-digital.com/images/ftlog.png" style="max-height:30px;">
-                <p style="font-size: small;">At our company, we are dedicated to supporting you in the seamless
-                    creation
+                <p style="font-size: small;">At our company, we are dedicated to supporting you in the seamless creation
                     of exceptional content that is both efficient and high in quality. Our expert team and advanced
-                    AI-powered tools work hand in hand to assist you in effortlessly producing top-notch content
-                    that
+                    AI-powered tools work hand in hand to assist you in effortlessly producing top-notch content that
                     captivates your audience.</p>
             </div>
             <div class="col-sm-6">
@@ -512,8 +598,30 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }</script>
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const whatsappIcon = document.getElementById('whatsapp-icon');
+    const popup = document.getElementById('popup');
+
+    whatsappIcon.addEventListener('click', function() {
+        if (popup.style.display === 'none' || popup.style.display === '') {
+            popup.style.display = 'block';
+        } else {
+            popup.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!whatsappIcon.contains(event.target) && !popup.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+});
+
+         </script>
     <script src="https://kit.fontawesome.com/72d73f73fa.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>

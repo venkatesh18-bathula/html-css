@@ -7,7 +7,7 @@
     <title>Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .image {
+        .imagee {
             position: fixed;
             bottom: 80px;
             right: 18px;
@@ -16,6 +16,10 @@
             border-radius: 50px;
             background: rgb(162, 41, 214);
             border: none;
+            border-radius: 200px 200px 200px 35px;
+            -moz-border-radius: 200px 200px 200px 35px;
+            -webkit-border-radius: 200px 200px 200px 35px;
+            border: 0px solid #000000;
         }
 
         .bg-color {
@@ -103,6 +107,39 @@
 .dropdown-menu li a:hover {
     background-color: #f0f0f0; /* Adjust hover background color */
 }
+whatsapp-icon {
+    cursor: pointer;
+    width: 10px; /* Adjust size as needed */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 25rem;
+    right: -80px;
+    transform: translateX(-50%);
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup p {
+    margin: 0px 0;
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust to position the arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
 
     </style>
 </head>
@@ -142,9 +179,20 @@
         </div>
         </div>
     <div class="image">
-        <img src="https://kona-digital.com/images/call_o_o.png">
+        <div class="whatsapp-container">
+            <div id="whatsapp-icon" class="whatsapp-icon">
+                <img src="https://kona-digital.com/images/call_o_o.png" class="imagee">
+            </div>
+            <div id="popup" class="popup"
+                style="border-bottom-left-radius: 25px;border-bottom-right-radius: 25px; margin-right:-50px;  margin-bottom:580px;">
+                <p class="px-5"
+                    style="background-image: linear-gradient(-225deg, #a429d7 55%, #f58220);padding: 9px;font-size: 18px;color: white;">
+                    Call Us (Or) WhatsApp Us</p>
+                <p style="font-size: 22px;padding-top:8%;padding-bottom:8%;padding-left:0%">+91 9515175551</p>
+            </div>
+        </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row mt-0 pt-0"
             style="border-bottom: 1px solid rgba(0, 0, 0, 0.21); padding:5px;border: none; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);">
             <div class="col-sm-6">
@@ -387,12 +435,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">
                                 Calling unavailable in some countries</strong>
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
 
                             pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
@@ -492,7 +540,27 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }</script>
+    }
+    
+    document.addEventListener('DOMContentLoaded', function () {
+            const whatsappIcon = document.getElementById('whatsapp-icon');
+            const popup = document.getElementById('popup');
+
+            whatsappIcon.addEventListener('click', function () {
+                if (popup.style.display === 'none' || popup.style.display === '') {
+                    popup.style.display = 'block';
+                } else {
+                    popup.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!whatsappIcon.contains(event.target) && !popup.contains(event.target)) {
+                    popup.style.display = 'none';
+                }
+            });
+        }); 
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
