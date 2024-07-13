@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .bgimage {
             background-image: url(https://kona-digital.com/images/herobg.jpg);
@@ -158,6 +165,47 @@
             border-style: solid;
             border-color: #fff transparent transparent transparent;
         }
+        
+        .ropee{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 3025px;
+            width: 99%;
+            animation: zoom-in-zoom-out 6s ease infinite;            
+            z-index:-1;
+        }
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .rope{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 2025px;
+            width: 99%;
+            animation: zoom-in-zoom-out 6s ease infinite;            
+            z-index:-1;
+        }
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
     </style>
 
 </head>
@@ -249,7 +297,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="../welcome-project/kona-website/sevices.html" role="button"
+                                    <a class="nav-link dropdown-toggle" href="../welcome-project/kona-website/services.html" role="button"
                                         aria-expanded="false">
                                         Services
                                     </a>
@@ -289,9 +337,9 @@
         </div>
     </div>
     <div class="bgimage"></div>
-    <div class="container" style="margin-top: -7rem;display:flex;gap:30px;justify-content:center;">
+    <div class="container" style="display:flex;gap:30px;justify-content:center; ">
         <div class="col-sm-4"
-            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);">
+            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);margin-top: -7rem">
             <img src="https://kona-digital.com/images/img1.jpg" style="width: 100%;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">CRM (Customer<br> Relationship<br> Management)</h3>
             <p class="">Leverage our AI-powered CRM to gain<br>actionable insights, automate <br> mundane tasks, and
@@ -299,19 +347,20 @@
             <p style="margin-left:15rem;margin-top:3rem">know more <img src="https://kona-digital.com/images/arrow.png">
             </p>
         </div>
-        <div class="col-sm-4"
-            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none; margin-top: -7rem;width: auto;box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);">
+        <div class="col-sm-4 "
+            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);margin-top: -14rem;">
             <img src="https://kona-digital.com/images/img2.jpg" style="width: 100%;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">LMS (Learning<br>Management System)</h3>
             <p>Transform the learning experience<br> with our intelligent LMS, designed to <br>cater to the evolving
                 needs of the<br> education sector.</p>
-            <p style="margin-left:15rem;margin-top:3rem">know more <img src="https://kona-digital.com/images/arrow.png">
+            <p style="margin-left:15rem;margin-top:3rem;padding-bottom:-3rem;">know more <img src="https://kona-digital.com/images/arrow.png">
             </p>
 
         </div>
         <div class="col-sm-4"
-            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;width: auto; box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);">
-            <img src="https://kona-digital.com/images/img3.jpg" style="width: 100%;">
+            style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;width: auto; box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5); margin-top: -7rem" >
+            <img src="https://kona-digital.com/images/img3.jpg"
+                style="width: 100%; transition: transform 0.3s ease-out;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">HRMS (Human <br>Resource Management <br>System)</h3>
             <p>Optimise your HR processes with our<br> AI-driven HRMS, ensuring efficient<br> management of
                 recruiting, training,<br> payroll, and more.</p>
@@ -357,7 +406,9 @@
             </div>
             </P>
         </div>
-        <div class="row">
+        <div class="row" 
+            >
+            <img src="https://kona-repo-git-main-hari-vennavallis-projects.vercel.app/ropeline.png.png" class="ropee" alt="" >
             <div class="col-sm-6 mt-0 pt-0"
                 style="text-align: center;align-items: center;border-right: 2px solid rgb(222, 222, 222);">
                 <img src="https://kona-digital.com/images/f3.png">
@@ -382,8 +433,9 @@
                 style="color:rgb(138, 112, 186)">millions</span></h1>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6 px-3 py-2"
+        <div class="row ">
+
+            <div class="col-sm-6 px-3 py-2 "
                 style="border: 2px solid  rgb(222, 222, 222);padding-right:-100px;margin:0px" ;>
                 <p>As a freelance writer, I was looking for a tool that could help me generate<br> ideas and write
                     faster.
@@ -399,7 +451,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 px-3 py-2" style="border: 2px solid  rgb(222, 222, 222)" ;>
+            <div class="col-sm-6 px-3 py-2 " style=" border: 2px solid rgb(222, 222, 222)" ;>
                 <p>As a freelance writer, I was looking for a tool that could help me generate<br> ideas and write
                     faster.
 
@@ -414,260 +466,289 @@
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
-    <div class="container" style="margin-top:10rem">
-        <div class="row">
-            <div class="col-sm-6" style="text-align: center; padding-top: 80px;">
-                <h2 style="color:rgb(0, 11, 97);font-family: 800px;">Bengaluru</h2>
-                <P>
-                    3rd Floor, Site No 1&2 Saroj Square, Whitefield<br>
-                    Main Road, Munnekollal Villag Post,<br>
-                    Marathahalli, Bengaluru, Karnataka 560037</P>
-            </div>
-            <div class="col-sm-6">
-                <img src="https://kona-digital.com/images/bangalore.png" alt=""
-                    style="height: 320px;margin-left: 50px;">
-            </div>
-        </div>
-        <div class="row" style="margin-top:90px">
-
-            <div class="col-sm-6">
-                <img src="https://kona-digital.com/images/hyderabad.png" style="height: 320px;margin-left: 90px;">
-            </div>
-            <div class="col-sm-6" style="text-align: center;  padding-top: 80px;">
-                <h2 style="color:rgb(0, 11, 97)">Hyderabad</h2>
-                <P>
-                    2nd Floor, Hitech City Rd, Above Domino's, opp.<br>
-                    Cyber Towers, Jai hind Enclave,<br>
-                    Hyderabad, Telangana, 06304982304
-
-                </P>
-            </div>
-        </div>
-    </div>
-    <h3
-        style="margin: 0 0 70px;text-align: center;font-weight: 600;font-size: 40px;color:rgb(0, 11, 97);margin-top: 10rem;">
-        Q&A</h3>
-    <div class="container">
-        <div class="row" style="margin-right:8rem;margin-left:8rem">
-            <div class="col-sm">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button " type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                                style="text-align:center;">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">What services
-                                    does
-                                    Kona Digital provide?</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Kona Digital specializes in building custom AI applications, including AI-powered
-                                CRM,
-                                LMS, and HRMS solutions. We also offer comprehensive marketing, sales, and service
-                                solutions tailored to the unique needs of various industries, including education,
-                                real
-                                estate, IT, and more.
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">How can AI
-                                    solutions benefit my business?</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                AI solutions can automate repetitive tasks, provide valuable insights through
-                                predictive
-                                analytics, enhance personalized interactions, improve operational efficiency, and
-                                ultimately drive better business outcomes. Whether it's managing customer
-                                relationships,
-                                optimizing HR processes, or enhancing learning experiences, our AI solutions are
-                                designed to meet your specific needs.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">easy to
-                                    integrate
-                                    Kona Digital's AI solutions with my existing systems?</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Yes, our AI solutions are designed to seamlessly integrate with various existing
-                                tools
-                                and platforms, ensuring a smooth transition and consistency across your workflows.
-                                This
-                                minimizes disruption and maximizes efficiency.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">Can Kona
-                                    Digital's
-                                    solutions be customized for my business?</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                Absolutely. We understand that every business is unique. Our AI solutions are highly
-                                customizable, allowing us to tailor features, workflows, and dashboards to align
-                                with
-                                your specific business processes and objectives.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">
-                                    How does Kona Digital ensure data security?</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                We prioritize data security and comply with industry-leading standards and
-                                regulations.
-                                Our solutions include robust security measures such as data encryption, access
-                                control,
-                                and regular security audits to ensure your information.
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="background: linear-gradient(1deg, #e4edf5, #fff); margin-top: 12rem;">
-        <div class="container">
+        <div class="container" style="margin-top:10rem">
             <div class="row">
-                <div class="col-sm" style="text-align: center;align-items: center;">
-                    <h3 style="font-size: 40px;color:rgb(0, 11, 97); margin-top: 10rem;margin-left: 5rem;">Let’s
-                        connect.</h3>
-                    <p>Whether you have a groundbreaking idea or a challenging project <br> in mind, AI Hub is here
-                        to
-                        make it a reality.</p>
-                    <button class="px-4 py-2 rounded  text-white"
-                        style="background:linear-gradient(90deg, #4e3bbf, #a928d8);border: none;padding:10px 24px">Send
-                        Message</button>
+                <img src="https://kona-repo-git-main-hari-vennavallis-projects.vercel.app/ropeline.png.png" class="rope" alt="" >
+
+                <div class="col-sm-6" style="text-align: center; padding-top: 80px;">
+                    <h2 style="color:rgb(0, 11, 97);font-family: 800px;">Bengaluru</h2>
+                    <P>
+                        3rd Floor, Site No 1&2 Saroj Square, Whitefield<br>
+                        Main Road, Munnekollal Villag Post,<br>
+                        Marathahalli, Bengaluru, Karnataka 560037</P>
                 </div>
+                <div class="col-sm-6">
+                    <img src="https://kona-digital.com/images/bangalore.png" alt=""
+                        style="height: 320px;margin-left: 50px;">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:90px">
+
+                <div class="col-sm-6">
+                    <img src="https://kona-digital.com/images/hyderabad.png" style="height: 320px;margin-left: 90px;">
+                </div>
+                <div class="col-sm-6" style="text-align: center;  padding-top: 80px;">
+                    <h2 style="color:rgb(0, 11, 97)">Hyderabad</h2>
+                    <P>
+                        2nd Floor, Hitech City Rd, Above Domino's, opp.<br>
+                        Cyber Towers, Jai hind Enclave,<br>
+                        Hyderabad, Telangana, 06304982304
+
+                    </P>
+                </div>
+            </div>
+        </div>
+        <h3
+            style="margin: 0 0 70px;text-align: center;font-weight: 600;font-size: 40px;color:rgb(0, 11, 97);margin-top: 10rem;">
+            Q&A</h3>
+        <div class="container">
+            <div class="row" style="margin-right:8rem;margin-left:8rem">
                 <div class="col-sm">
-                    <img src="https://kona-digital.com/images/connect.png">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                    style="text-align:center;">
+                                    <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">What services
+                                        does
+                                        Kona Digital provide?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Kona Digital specializes in building custom AI applications, including AI-powered
+                                    CRM,
+                                    LMS, and HRMS solutions. We also offer comprehensive marketing, sales, and service
+                                    solutions tailored to the unique needs of various industries, including education,
+                                    real
+                                    estate, IT, and more.
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">How can AI
+                                        solutions benefit my business?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    AI solutions can automate repetitive tasks, provide valuable insights through
+                                    predictive
+                                    analytics, enhance personalized interactions, improve operational efficiency, and
+                                    ultimately drive better business outcomes. Whether it's managing customer
+                                    relationships,
+                                    optimizing HR processes, or enhancing learning experiences, our AI solutions are
+                                    designed to meet your specific needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">easy to
+                                        integrate
+                                        Kona Digital's AI solutions with my existing systems?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Yes, our AI solutions are designed to seamlessly integrate with various existing
+                                    tools
+                                    and platforms, ensuring a smooth transition and consistency across your workflows.
+                                    This
+                                    minimizes disruption and maximizes efficiency.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">Can Kona
+                                        Digital's
+                                        solutions be customized for my business?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    Absolutely. We understand that every business is unique. Our AI solutions are highly
+                                    customizable, allowing us to tailor features, workflows, and dashboards to align
+                                    with
+                                    your specific business processes and objectives.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <strong style="padding: 10px 0px;font-weight: 500; font-size: 20px;">
+                                        How does Kona Digital ensure data security?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We prioritize data security and comply with industry-leading standards and
+                                    regulations.
+                                    Our solutions include robust security measures such as data encryption, access
+                                    control,
+                                    and regular security audits to ensure your information.
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row" style="margin-left: 8rem;margin-top: 5rem;">
-            <div class="col-sm-3">
-                <img src="	https://kona-digital.com/images/ftlog.png" style="max-height:30px;">
-                <p style="font-size: small;">At our company, we are dedicated to supporting you in the seamless
-                    creation
-                    of exceptional content that is both efficient and high in quality. Our expert team and advanced
-                    AI-powered tools work hand in hand to assist you in effortlessly producing top-notch content
-                    that
-                    captivates your audience.</p>
-            </div>
-            <div class="col-sm-6">
-                <div class="row" style="margin-left: 50px; margin-top: px;">
-                    <div class="col-sm-3">
-                        <strong>Products</strong>
-                        <p>LMS</p>
-                        <P>CRM</P>
-                        <P>HRMS</P>
+        <div class="container-fluid" style="background: linear-gradient(1deg, #e4edf5, #fff); margin-top: 12rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm" style="text-align: center;align-items: center;">
+                        <h3 style="font-size: 40px;color:rgb(0, 11, 97); margin-top: 10rem;margin-left: 5rem;">Let’s
+                            connect.</h3>
+                        <p>Whether you have a groundbreaking idea or a challenging project <br> in mind, AI Hub is here
+                            to
+                            make it a reality.</p>
+                        <button class="px-4 py-2 rounded  text-white"
+                            style="background:linear-gradient(90deg, #4e3bbf, #a928d8);border: none;padding:10px 24px">Send
+                            Message</button>
                     </div>
-                    <div class="col-sm-3">
-                        <strong>Solutions</strong>
-                        <p>LMS</p>
-                        <P>CRM</P>
-                        <P>HRMS</P>
+                    <div class="col-sm">
+                        <img src="https://kona-digital.com/images/connect.png">
                     </div>
-                    <div class="col-sm-3">
-                        <strong>Services</strong>
-                        <p>LMS</p>
-                        <P>CRM</P>
-                        <P>HRMS</P>
-                    </div>
-                    <div class="col-sm-3">
-                        <strong>Resources</strong>
-
-                    </div>
-
                 </div>
             </div>
-            <div class="col-sm-3">
-                <img src="https://kona-digital.com/images/fticon.png.png">
+        </div>
+        <div class="container-fluid">
+            <div class="row" style="margin-left: 8rem;margin-top: 5rem;">
+                <div class="col-sm-3">
+                    <img src="	https://kona-digital.com/images/ftlog.png" style="max-height:30px;">
+                    <p style="font-size: small;">At our company, we are dedicated to supporting you in the seamless
+                        creation
+                        of exceptional content that is both efficient and high in quality. Our expert team and advanced
+                        AI-powered tools work hand in hand to assist you in effortlessly producing top-notch content
+                        that
+                        captivates your audience.</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row" style="margin-left: 50px; margin-top: px;">
+                        <div class="col-sm-3">
+                            <strong>Products</strong>
+                            <p>LMS</p>
+                            <P>CRM</P>
+                            <P>HRMS</P>
+                        </div>
+                        <div class="col-sm-3">
+                            <strong>Solutions</strong>
+                            <p>LMS</p>
+                            <P>CRM</P>
+                            <P>HRMS</P>
+                        </div>
+                        <div class="col-sm-3">
+                            <strong>Services</strong>
+                            <p>LMS</p>
+                            <P>CRM</P>
+                            <P>HRMS</P>
+                        </div>
+                        <div class="col-sm-3">
+                            <strong>Resources</strong>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="https://kona-digital.com/images/fticon.png.png">
+                </div>
             </div>
         </div>
-    </div>
-    <script> var modal = document.getElementById("myModal");
+        <script> var modal = document.getElementById("myModal");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("openModalBtn");
+            // Get the button that opens the modal
+            var btn = document.getElementById("openModalBtn");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-            modal.style.display = "flex";
-        }
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "flex";
+            }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
                 modal.style.display = "none";
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const whatsappIcon = document.getElementById('whatsapp-icon');
-            const popup = document.getElementById('popup');
-
-            whatsappIcon.addEventListener('click', function () {
-                if (popup.style.display === 'none' || popup.style.display === '') {
-                    popup.style.display = 'block';
-                } else {
-                    popup.style.display = 'none';
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
                 }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const whatsappIcon = document.getElementById('whatsapp-icon');
+                const popup = document.getElementById('popup');
+
+                whatsappIcon.addEventListener('click', function () {
+                    if (popup.style.display === 'none' || popup.style.display === '') {
+                        popup.style.display = 'block';
+                    } else {
+                        popup.style.display = 'none';
+                    }
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!whatsappIcon.contains(event.target) && !popup.contains(event.target)) {
+                        popup.style.display = 'none';
+                    }
+                });
             });
 
-            document.addEventListener('click', function (event) {
-                if (!whatsappIcon.contains(event.target) && !popup.contains(event.target)) {
-                    popup.style.display = 'none';
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 2
+                    }
                 }
             });
-        }); 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        </script>
+        </script>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 </body>
 
