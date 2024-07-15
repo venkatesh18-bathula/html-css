@@ -26,6 +26,7 @@
         body {
             position: absolute;
             width: 100%;
+            overflow-x: hidden;
 
         }
 
@@ -206,6 +207,15 @@
                 transform: translateY(0);
             }
         }
+       
+         imge {
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: auto;
+        }
+  imge:hover {
+            transform: scale(1.15);
+        }
     </style>
 
 </head>
@@ -276,7 +286,7 @@
                             <ul class="navbar-nav bg-none" style="margin-top: 10px;">
 
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="products.html" role="button"
+                                    <a class="nav-link dropdown-toggle" href="./kona-website/products.html" role="button"
                                         aria-expanded="false" style="text-decoration: none;">Products
 
                                     </a>
@@ -287,7 +297,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="solutions.html" role="button"
+                                    <a class="nav-link dropdown-toggle" href="./kona-website/solutions.html" role="button"
                                         aria-expanded="false">
                                         solutions
                                     </a>
@@ -297,7 +307,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown mx-2">
-                                    <a class="nav-link dropdown-toggle" href="services.html" role="button"
+                                    <a class="nav-link dropdown-toggle" href="./kona-website/services.html" role="button"
                                         aria-expanded="false">
                                         Services
                                     </a>
@@ -337,10 +347,10 @@
         </div>
     </div>
     <div class="bgimage"></div>
-    <div class="container" style="display:flex;gap:30px;justify-content:center; ">
+    <div class="container " style="display:flex;gap:30px;justify-content:center; ">
         <div class="col-sm-4"
             style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);margin-top: -7rem">
-            <img src="https://kona-digital.com/images/img1.jpg" style="width: 100%;">
+            <img src="https://kona-digital.com/images/img1.jpg" class="imge" style="width: 100%;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">CRM (Customer<br> Relationship<br> Management)</h3>
             <p class="">Leverage our AI-powered CRM to gain<br>actionable insights, automate <br> mundane tasks, and
                 build stronger <br>customer relationships.</p>
@@ -349,7 +359,7 @@
         </div>
         <div class="col-sm-4 "
             style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5);margin-top: -14rem;">
-            <img src="https://kona-digital.com/images/img2.jpg" style="width: 100%;">
+            <img src="https://kona-digital.com/images/img2.jpg" class="imge" style="width: 100%;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">LMS (Learning<br>Management System)</h3>
             <p>Transform the learning experience<br> with our intelligent LMS, designed to <br>cater to the evolving
                 needs of the<br> education sector.</p>
@@ -359,7 +369,7 @@
         </div>
         <div class="col-sm-4"
             style="border: 1px solid black; padding:15px;border-radius: 10px;background: white;border: none;width: auto; box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.5); margin-top: -7rem" >
-            <img src="https://kona-digital.com/images/img3.jpg"
+            <img src="https://kona-digital.com/images/img3.jpg" class="imge"
                 style="width: 100%; transition: transform 0.3s ease-out;">
             <h3 class="mt-4" style="color:rgb(0, 11, 97);">HRMS (Human <br>Resource Management <br>System)</h3>
             <p>Optimise your HR processes with our<br> AI-driven HRMS, ensuring efficient<br> management of
@@ -676,7 +686,7 @@
 
                     </div>
                 </div>
-                <div class="col-sm-3" style="position:relative;right:-15px;bottom: 35px;">
+                <div class="col-sm-3" style="position:relative;right:-105px;bottom: 35px;">
                     <img src="https://kona-digital.com/images/fticon.png.png" style="height: 90%;">
                 </div>
             </div>
